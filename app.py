@@ -569,29 +569,34 @@ HOME_PAGE = """
 
                 <div class="specialty-grid">
 
-                    <div class="specialty-card">
+                   <a href="/specialty/cardiology" class="specialty-card">
+    <div class="specialty-icon">&#9829;</div>
+    <h3>Cardiology</h3>
+    <p>Heart and cardiovascular care</p>
+                    <a href="/specialty/cardiology" class="specialty-card">
                         <div class="specialty-icon">&#9829;</div>
                         <h3>Cardiology</h3>
                         <p>Heart and cardiovascular care</p>
-                    </div>
+                    </a>
 
-                    <div class="specialty-card">
+                    <a href="/specialty/general-medicine" class="specialty-card">
                         <div class="specialty-icon">&#10010;</div>
                         <h3>General Medicine</h3>
                         <p>Everyday health consultations</p>
-                    </div>
+                    </a>
+                    
 
-                    <div class="specialty-card">
+                    <a href="/specialty/dermatology" class="specialty-card">
                         <div class="specialty-icon">&#9786;</div>
                         <h3>Dermatology</h3>
                         <p>Skin and hair consultations</p>
-                    </div>
+                    </a>
 
-                    <div class="specialty-card">
+                    <a href="/specialty/pediatrics" class="specialty-card">
                         <div class="specialty-icon">&#10084;</div>
                         <h3>Pediatrics</h3>
                         <p>Healthcare for children</p>
-                    </div>
+                    </a>
 
                 </div>
             </div>
@@ -718,10 +723,137 @@ HOME_PAGE = """
 """
 
 
+
 @app.route("/")
 def home():
     return render_template_string(HOME_PAGE)
 
 
+# All medical specialties supported by MediCare
+SPECIALTIES = {
+    "cardiology": "Cardiology",
+    "general-medicine": "General Medicine",
+    "dermatology": "Dermatology",
+    "pediatrics": "Pediatrics",
+    "gynaecology": "Gynaecology",
+    "psychiatry": "Psychiatry",
+    "orthopedics": "Orthopedics",
+    "neurology": "Neurology",
+    "dentistry": "Dentistry",
+    "ophthalmology": "Ophthalmology",
+    "ent": "ENT",
+    "oncology": "Oncology",
+    "endocrinology": "Endocrinology",
+    "gastroenterology": "Gastroenterology",
+    "nephrology": "Nephrology",
+    "urology": "Urology",
+    "pulmonology": "Pulmonology",
+    "rheumatology": "Rheumatology",
+}
+
+
+# One route handles every specialty page
+@app.route("/specialty/<slug>")
+def specialty_page(slug):
+    specialty_name = SPECIALTIES.get(slug)
+
+    # Show a proper error if the specialty does not exist
+    if specialty_name is None:
+        return render_template_string("""
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Specialty Not Found | MediCare</title>
+            </head>
+            <body style="font-family: Arial; padding: 40px;">
+                <h1>Specialty not found</h1>
+                <p>Please choose a specialty from MediCare.</p>
+                <a href="/">Return to homepage</a>
+            </body>
+            </html>
+        """), 404
+
+    return render_template_string("""
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport"
+                  content="width=device-width, initial-scale=1.0">
+            <title>{{ specialty_name }} | MediCare</title>
+
+            <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    margin: 0;
+                    padding: 30px 20px;
+                    font-family: Arial, sans-serif;
+                    color: #153a50;
+                    background: #f5f8f7;
+                    line-height: 1.6;
+                }
+
+                main {
+                    max-width: 850px;
+                    margin: 30px auto;
+                    padding: 35px;
+                    background: white;
+                    border-radius: 14px;
+                    box-shadow: 0 8px 30px #153a5010;
+                }
+
+                h1 {
+                    margin-top: 28px;
+                    font-size: 32px;
+                }
+
+                p {
+                    color: #647580;
+                }
+
+                a {
+                    color: #207e74;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+
+                .notice {
+                    margin-top: 25px;
+                    padding: 18px;
+                    border-radius: 10px;
+                    background: #e7f4f1;
+                }
+            </style>
+        </head>
+
+        <body>
+            <main>
+                <a href="/">&#8592; Back to MediCare</a>
+
+                <h1>{{ specialty_name }}</h1>
+
+                <p>
+                    Find healthcare professionals specialising in
+                    {{ specialty_name }}.
+                </p>
+
+                <div class="notice">
+                    <strong>Doctor directory</strong>
+                    <p>
+                        Doctor listings will appear here as doctors
+                        enrol and their profiles are approved.
+                    </p>
+                </div>
+            </main>
+        </body>
+        </html>
+    """, specialty_name=specialty_name)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
+
