@@ -569,34 +569,116 @@ HOME_PAGE = """
 
                 <div class="specialty-grid">
 
-                   <a href="/specialty/cardiology" class="specialty-card">
-    <div class="specialty-icon">&#9829;</div>
-    <h3>Cardiology</h3>
-    <p>Heart and cardiovascular care</p>
-                    <a href="/specialty/cardiology" class="specialty-card">
-                        <div class="specialty-icon">&#9829;</div>
-                        <h3>Cardiology</h3>
-                        <p>Heart and cardiovascular care</p>
+                  
+                   
+
+                       <a href="/specialty/cardiology" class="specialty-card">
+                       <div class="specialty-icon">&#9829;</div>
+                       <h3>Cardiology</h3>
+                       <p>Heart and cardiovascular care</p>
+                       </a>
+
+                      <a href="/specialty/general-medicine" class="specialty-card">
+                      <div class="specialty-icon">&#10010;</div>
+                      <h3>General Medicine</h3>
+                      <p>Everyday health consultations</p>
+                      </a>
+
+                      <a href="/specialty/dermatology" class="specialty-card">
+                      <div class="specialty-icon">&#9786;</div>
+                      <h3>Dermatology</h3>
+                      <p>Skin and hair consultations</p>
+                      </a>
+
+                      <a href="/specialty/pediatrics" class="specialty-card">
+                      <div class="specialty-icon">&#10084;</div>
+                      <h3>Pediatrics</h3>
+                      <p>Healthcare for children</p>
+                      </a>
+
+                      <a href="/specialty/gynaecology" class="specialty-card">
+                      <div class="specialty-icon">&#10047;</div>
+                      <h3>Gynaecology</h3>
+                      <p>Women's reproductive healthcare</p>
+                      </a>
+
+                      <a href="/specialty/psychiatry" class="specialty-card">
+                      <div class="specialty-icon">&#9788;</div>
+                      <h3>Psychiatry</h3>
+                      <p>Mental health consultations</p>
+                      </a>
+
+                      <a href="/specialty/orthopedics" class="specialty-card">
+                      <div class="specialty-icon">&#10010;</div>
+                      <h3>Orthopedics</h3>
+                      <p>Bones, joints and mobility</p>
+                      </a>
+
+                      <a href="/specialty/neurology" class="specialty-card">
+                      <div class="specialty-icon">&#9733;</div>
+                      <h3>Neurology</h3>
+                      <p>Brain, nerves and nervous system</p>
+                      </a>
+
+                      <a href="/specialty/dentistry" class="specialty-card">
+                      <div class="specialty-icon">&#9786;</div>
+                      <h3>Dentistry</h3>
+                      <p>Teeth and oral healthcare</p>
+                      </a>
+
+                                        <a href="/specialty/ophthalmology" class="specialty-card">
+                                                <div class="specialty-icon">&#9678;</div>
+                                                <h3>Ophthalmology</h3>
+                                                <p>Eye health and vision care</p>
+                                        </a>
+
+                    <a href="/specialty/ent" class="specialty-card">
+                        <div class="specialty-icon">&#9834;</div>
+                        <h3>ENT</h3>
+                        <p>Ear, nose and throat care</p>
                     </a>
 
-                    <a href="/specialty/general-medicine" class="specialty-card">
-                        <div class="specialty-icon">&#10010;</div>
-                        <h3>General Medicine</h3>
-                        <p>Everyday health consultations</p>
-                    </a>
-                    
+    <a href="/specialty/oncology" class="specialty-card">
+        <div class="specialty-icon">&#10010;</div>
+        <h3>Oncology</h3>
+        <p>Cancer care and consultations</p>
+    </a>
 
-                    <a href="/specialty/dermatology" class="specialty-card">
-                        <div class="specialty-icon">&#9786;</div>
-                        <h3>Dermatology</h3>
-                        <p>Skin and hair consultations</p>
-                    </a>
+    <a href="/specialty/endocrinology" class="specialty-card">
+        <div class="specialty-icon">&#10047;</div>
+        <h3>Endocrinology</h3>
+        <p>Hormones and metabolic health</p>
+    </a>
 
-                    <a href="/specialty/pediatrics" class="specialty-card">
-                        <div class="specialty-icon">&#10084;</div>
-                        <h3>Pediatrics</h3>
-                        <p>Healthcare for children</p>
-                    </a>
+    <a href="/specialty/gastroenterology" class="specialty-card">
+        <div class="specialty-icon">&#9829;</div>
+        <h3>Gastroenterology</h3>
+        <p>Digestive system healthcare</p>
+    </a>
+
+    <a href="/specialty/nephrology" class="specialty-card">
+        <div class="specialty-icon">&#10010;</div>
+        <h3>Nephrology</h3>
+        <p>Kidney health and care</p>
+    </a>
+
+    <a href="/specialty/urology" class="specialty-card">
+        <div class="specialty-icon">&#10047;</div>
+        <h3>Urology</h3>
+        <p>Urinary tract healthcare</p>
+    </a>
+
+    <a href="/specialty/pulmonology" class="specialty-card">
+        <div class="specialty-icon">&#9829;</div>
+        <h3>Pulmonology</h3>
+        <p>Lung and respiratory care</p>
+    </a>
+
+    <a href="/specialty/rheumatology" class="specialty-card">
+        <div class="specialty-icon">&#10010;</div>
+        <h3>Rheumatology</h3>
+        <p>Joint and autoimmune conditions</p>
+    </a>
 
                 </div>
             </div>
